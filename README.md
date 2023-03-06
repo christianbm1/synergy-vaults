@@ -1,13 +1,14 @@
-# Sample Hardhat Project
+# Synergy Vault Contracts
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+1. Create a .env file with:
+    - bsc4 (private key of deployer)
+    - testKey (private key of signer)
+    - COINMARKETCAP (key to get gas prices)
 
-Try running some of the following tasks:
+2. Run a node with the following command: "npx hardhat node --no-deploy"
+    - This will run a fork off of the bsc chain, using ankr
 
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+3. Run tests:
+    - npx hardhat --network localhost test ./test/magic.js
+    - npx hardhat --network localhost test ./test/burning.js
+
